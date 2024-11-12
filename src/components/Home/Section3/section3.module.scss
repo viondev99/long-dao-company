@@ -1,0 +1,114 @@
+@import '../../../styles/variables.module.scss';
+
+.section3 {
+  @media (min-width: 1200px) {
+    margin-top: 70px;
+  }
+  @media (max-width: 1199.98px) {
+    margin-top: 50px;
+  }
+}
+
+.coverContent {
+  @media (max-width: 1199.98px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h3 {
+    @media (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 1199.98px) {
+      margin-bottom: 30px;
+    }
+
+    text-align: center;
+    font-weight: 300;
+    font-size: px-to-rem(28);
+    line-height: 32px;
+  }
+}
+
+.coverList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.wrapItemList {
+  cursor: pointer;
+
+  width: calc(50% - 10px);
+
+  @media (max-width: 767.98px) {
+    width: 100%;
+  }
+}
+
+.coverItem {
+  max-width: 100%;
+  height: 100%;
+  background-color: $white;
+  color: $black;
+
+  .imgItem {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+
+  .imgCap {
+    font-weight: 300;
+    font-size: px-to-rem(24);
+    line-height: 28px;
+    width: 100%;
+    padding: 20px 20px 0;
+  }
+
+  .imgDes {
+    width: 100%;
+    padding: 20px;
+    color: $shadow_grey;
+    font-weight: 400;
+    font-size: px-to-rem(16);
+    line-height: 24px;
+  }
+}
+
+.actionAll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 1200px) {
+    margin-top: 70px;
+  }
+
+  @media (max-width: 1199.98px) {
+    margin-top: 50px;
+  }
+
+  .clickAll {
+    cursor: pointer;
+    background-color: $white;
+    color: $black;
+    height: 48px;
+    min-width: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    padding: 0 30px;
+    font-size: px-to-rem(14);
+    outline: none;
+    border-radius: 48px;
+    border: 1px solid transparent;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

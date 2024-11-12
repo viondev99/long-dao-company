@@ -1,0 +1,68 @@
+@import '../../../styles/variables.module.scss';
+
+.menuMobile {
+  background-color: $back_ground_pink;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(12.8);
+  width: 100%;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  z-index: 99;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.listSiteBar {
+  padding: 5px 20px;
+  border-bottom: solid 1px $light_grey;
+  line-height: 3;
+
+  .itemLink {
+    color: $text_black;
+
+    &.default {
+      color: $primary;
+    }
+
+    &.selected {
+      color: $primary;
+    }
+  }
+
+  &.itemFirst {
+    border-top: solid 1px $light_grey;
+  }
+}
+
+.listIconContact {
+  padding: 5px 20px;
+  border-bottom: solid 1px $light_grey;
+  line-height: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 49.39px;
+
+  a {
+    height: 20px;
+    margin: 0 25px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+
+    @media (max-width: 767.98px) {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}

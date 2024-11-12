@@ -1,0 +1,18 @@
+.footerWraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 200px;
+}
+
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.selectWrapper {
+  position: absolute;
+  right: 0;
+}

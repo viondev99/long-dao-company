@@ -1,0 +1,29 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+$primary: #c2a09e;
+
+$white: #ffffff;
+$black: #000000;
+$background_black: #121212;
+$back_groud_black: hsla(0, 0%, 7%, .9);
+$blue_link: #4cb3e4;
+$text_black: #383f42;
+$text_light_black2: #444444;
+$back_ground_pink: #fcf5f2;
+$line_black: #383f42;
+$light_grey: #dddddd;
+$ligheste_grey: #ffffff2e;
+$litle_grey: #d5d8dc;
+$lighter_grey: #69727d;
+$shadow_grey: #666;
+$light_shadow_grey: #999;
+
+@function px-to-rem($px) {
+  @return ($px/16) + rem;
+}
+
+$large: 65px;
+$medium: 55px;
+$small: 45px;

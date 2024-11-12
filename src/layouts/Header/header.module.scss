@@ -1,0 +1,151 @@
+@import '../../styles/variables.module.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.5s ease;
+}
+
+.coverHeader {
+  height: 68px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: $back_groud_black;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.navigationBar {
+  padding: 0 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+
+  @media (max-width: 1199.98px) {
+    padding: 0 20px;
+  }
+}
+
+.wrapLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .logo {
+    vertical-align: middle;
+  }
+}
+
+.linkLogo {
+  margin-right: 45px;
+}
+
+.wrapRight {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.wrapSiteBarLeft {
+  display: flex;
+  align-items: center;
+
+  .linkSitebar {
+    height: 100%;
+    color: $white;
+    padding: 0 10px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: px-to-rem(14);
+
+    &:hover {
+      color: $primary;
+    }
+
+    &.selected {
+      color: $primary;
+    }
+  }
+}
+
+.wrapSearch {
+  padding: 1px 6px
+}
+
+.desktopSearchIcon {
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+
+  .iconSearch {
+    vertical-align: middle;
+    cursor: pointer;
+  }
+}
+
+.wrapSiteBarRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+
+  .linkSocial {
+    height: 20px;
+    margin: 0 5px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+
+    &.linkLinkedin {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+
+  .icFB {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  .icIns {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  .icLinkedin {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+}
+
+.wrapRightMobile {
+  padding: 7px 0 7px 7px;
+
+  .menuSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+
+    .icLightRowMenu {
+    }
+
+    .icExit {
+    }
+  }
+}
