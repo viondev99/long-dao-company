@@ -1,0 +1,59 @@
+@import '../../../styles/variables.module.scss';
+
+.section7 {
+  @media (min-width: 1200px) {
+    margin-top: 70px;
+  }
+  @media (max-width: 1199.98px) {
+    margin-top: 50px;
+  }
+}
+
+.coverContent {
+  @media (max-width: 1199.98px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.wrapItem {
+  background-color: $white;
+}
+
+.wrapImg {
+  @media (min-width: 1200px) {
+    height: 342px;
+  }
+
+  @media (max-width: 1199.98px) {
+    height: 200px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title {
+  font-weight: 300;
+  font-size: px-to-rem(24);
+  line-height: 28px;
+  color: $black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 20px 20px 0;
+}
+
+.des {
+  padding: 20px;
+  color: $shadow_grey;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 24px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

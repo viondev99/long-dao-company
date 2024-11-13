@@ -46,7 +46,7 @@ const Section6: FC = () => {
 
   useEffect(() => {
     const updateSlidesPerView = () => {
-      setSlidesPerView(window.innerWidth <= 640 ? 1.5 : 2.5)
+      setSlidesPerView(window.innerWidth <= 767.98 ? 1.5 : 2.5)
     }
 
     updateSlidesPerView() // Set initial value

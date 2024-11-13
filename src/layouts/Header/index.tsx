@@ -1,13 +1,10 @@
 import { FC, lazy, Suspense, useState } from 'react'
-// import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import classes from './header.module.scss'
-// import LanguageSwitcher from '@/components/LanguageSwitcher'
 import useDeviceDetect from '@/hooks/useDeviceDetect'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../../assets/icons/header/logo_white.svg'
-import { ListSiteBar } from '@/models/header'
-import { listSiteBar } from '@/store/main_layout_data'
 import cx from 'classnames'
 import icLightRowMenu from '../../assets/icons/header/ic_lightRowMenu.svg'
 import icExit from '../../assets/icons/header/ic_exit.svg'
@@ -15,10 +12,25 @@ import icSearch from '../../assets/icons/header/ic_search.svg'
 
 const ListMenuMobile = lazy(() => import('./listMenuMobile'))
 
+interface SiteMap {
+  id: string
+  title: string
+  url: string
+}
+
 const Header: FC = () => {
-  // const { t } = useTranslation('layouts/header')
+  const { t } = useTranslation('layouts/header')
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false)
   const isMobileLg = useDeviceDetect('mobile-lg')
+
+  const listSiteBar: SiteMap[] = [
+    { id: '1', title: t('INTRODUCTION'), url: '#' },
+    { id: '2', title: t('SERVICE'), url: '#' },
+    { id: '3', title: t('SOLUTION'), url: '#' },
+    { id: '4', title: t('NEWS'), url: '#' },
+    { id: '5', title: t('CONTACT'), url: '#' },
+  ]
+
   return (
     <>
       <header className={'ContainerHeader'}>
@@ -32,13 +44,13 @@ const Header: FC = () => {
                 {!isMobileLg ? (
                   <div className={classes.wrapRight}>
                     <div className={classes.wrapSiteBarLeft}>
-                      {listSiteBar.map((it: ListSiteBar) => (
+                      {listSiteBar.map((it: SiteMap) => (
                         <Link
                           href={`${it.url}`}
                           key={it.id}
                           className={cx(classes.linkSitebar)}
                         >
-                          {it.content}
+                          {it.title}
                         </Link>
                       ))}
                     </div>

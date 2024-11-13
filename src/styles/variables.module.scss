@@ -19,6 +19,7 @@ $litle_grey: #d5d8dc;
 $lighter_grey: #69727d;
 $shadow_grey: #666;
 $light_shadow_grey: #999;
+$star_grey: #707070;
 
 @function px-to-rem($px) {
   @return ($px/16) + rem;
