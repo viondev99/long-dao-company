@@ -80,6 +80,16 @@ const Footer: FC = () => {
                 ))}
             </div>
           </div>
+          <div className={classes.listContact}>
+            {listContact.map((it: ListContact) => (
+              <Image
+                key={it.id}
+                src={it.img}
+                alt={it.alt}
+                className={it.id === '1' ? classes.item1 : ''}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <div className={classes.footerContact}>
@@ -89,7 +99,7 @@ const Footer: FC = () => {
             <Image src={earthLogo} alt='earth' />
             <div className={classes.vi}>{t('VIETNAM')}</div>
           </div>
-          <div className={classes.listContact}>
+          <div className={classes.listContactMobile}>
             {listContact.map((it: ListContact) => (
               <Image key={it.id} src={it.img} alt={it.alt} />
             ))}
